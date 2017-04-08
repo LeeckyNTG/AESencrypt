@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="cn.gz.aesencrypt.core.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="cn.gz.aesencrypt.core.Perspective"
+            id="AESencrypt.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="cn.gz.lk.view.MenuView"
+            id="cn.gz.lk.view.MenuView"
+            name="AES加密">
+      </view>
+      <view
+            class="cn.gz.lk.view.JiamiView"
+            id="cn.gz.lk.view.JiamiView"
+            name="AES加密">
+      </view>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="AESencrypt.application"
+            name="AESencrypt1">
+         <property
+               name="appName"
+               value="AESencrypt1">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="product1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="AESencrypt.application"
+            name="AESencrypt">
+         <property
+               name="appName"
+               value="AESencrypt">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
